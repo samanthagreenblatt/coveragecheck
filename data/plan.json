@@ -1,0 +1,213 @@
+{
+  "plan_name": "Sample PPO Plan",
+  "plan_type": "PPO",
+  "plan_year": 2025,
+  "deductible": {
+    "individual": 1500,
+    "family": 3000,
+    "notes": "Preventive care is covered before deductible is met. Most copay-based services (office visits, Rx) also apply before deductible."
+  },
+  "out_of_pocket_max": {
+    "individual": 5000,
+    "family": 10000,
+    "notes": "Once met, covered services are paid at 100% for the rest of the plan year."
+  },
+  "coinsurance": {
+    "in_network": "80% after deductible for services without a set copay",
+    "out_of_network": "60% after out-of-network deductible"
+  },
+  "copays": {
+    "primary_care": {
+      "amount": 25,
+      "notes": "Applies to in-network PCP visits. Copay applies before deductible."
+    },
+    "specialist": {
+      "amount": 50,
+      "notes": "Applies to in-network specialist visits. No referral required."
+    },
+    "urgent_care": {
+      "amount": 75,
+      "notes": "For non-emergency, same-day care at urgent care centers."
+    },
+    "emergency_room": {
+      "amount": 250,
+      "notes": "Waived if admitted to the hospital. ER copay applies even out-of-network."
+    },
+    "physical_therapy": {
+      "amount": 40,
+      "notes": "Covered up to 30 visits per year. No prior auth required."
+    },
+    "occupational_therapy": {
+      "amount": 40,
+      "notes": "Covered up to 30 visits per year."
+    },
+    "speech_therapy": {
+      "amount": 40,
+      "notes": "Covered up to 20 visits per year."
+    },
+    "mental_health_therapy": {
+      "amount": 30,
+      "notes": "Applies to outpatient therapy sessions (psychologist, LCSW, LPC, etc.)."
+    },
+    "mental_health_psychiatry": {
+      "amount": 50,
+      "notes": "Applies to outpatient psychiatry visits including medication management."
+    },
+    "telehealth": {
+      "amount": 15,
+      "notes": "For virtual primary care and mental health visits via in-network telehealth providers."
+    },
+    "preventive_care": {
+      "amount": 0,
+      "notes": "Covered at $0 before deductible per ACA guidelines. Includes annual physicals, recommended screenings, and immunizations."
+    },
+    "lab_work": {
+      "amount": 20,
+      "notes": "For routine lab work ordered by an in-network provider. Complex labs may apply coinsurance instead."
+    },
+    "imaging_xray": {
+      "amount": 50,
+      "notes": "Standard X-rays. MRI and CT scans require prior authorization and apply coinsurance after deductible."
+    },
+    "chiropractic": {
+      "amount": 40,
+      "notes": "Covered up to 20 visits per year. No referral required."
+    },
+    "nutrition_counseling": {
+      "amount": 30,
+      "notes": "Up to 6 visits per year with a registered dietitian."
+    },
+    "vision_exam": {
+      "amount": 20,
+      "notes": "One routine eye exam per year covered. Frames and lenses are not covered under the medical plan."
+    }
+  },
+  "prescription_tiers": {
+    "tier_1_generic": {
+      "copay": 10,
+      "supply": "30-day supply at retail; 90-day supply by mail for $25",
+      "examples": ["amoxicillin", "ibuprofen", "metformin", "lisinopril", "omeprazole", "levothyroxine", "atorvastatin", "amlodipine", "sertraline", "fluoxetine"]
+    },
+    "tier_2_preferred_brand": {
+      "copay": 35,
+      "supply": "30-day supply at retail; 90-day supply by mail for $90",
+      "examples": ["Eliquis", "Ozempic", "Xarelto", "Jardiance", "Trulicity", "Victoza", "Symbicort", "Spiriva"]
+    },
+    "tier_3_non_preferred": {
+      "copay": 60,
+      "supply": "30-day supply. Mail order available for $150 for 90-day supply.",
+      "examples": ["Humira", "Enbrel", "Dupixent", "Rinvoq", "Skyrizi"]
+    },
+    "tier_4_specialty": {
+      "copay": 100,
+      "supply": "30-day supply only. Requires specialty pharmacy.",
+      "notes": "Prior authorization required. Specialty pharmacy program enrollment may be required.",
+      "examples": ["Keytruda", "Stelara", "Ocrevus", "Tecfidera", "Cosentyx"]
+    },
+    "birth_control": {
+      "copay": 0,
+      "notes": "Generic and certain brand contraceptives covered at $0 under ACA preventive mandate. Includes pills, patches, rings, IUDs, and implants."
+    }
+  },
+  "covered_services": {
+    "primary_care": true,
+    "specialist_visits": true,
+    "urgent_care": true,
+    "emergency_room": true,
+    "mental_health": true,
+    "substance_use_disorder": true,
+    "physical_therapy": true,
+    "occupational_therapy": true,
+    "speech_therapy": true,
+    "chiropractic": true,
+    "acupuncture": false,
+    "fertility_treatment": {
+      "covered": true,
+      "notes": "Covered with prior authorization. Lifetime maximum benefit of $15,000."
+    },
+    "maternity": {
+      "covered": true,
+      "notes": "Prenatal visits at $0 copay. Labor and delivery: $250 facility copay after deductible."
+    },
+    "preventive_care": true,
+    "vision_exam": {
+      "covered": true,
+      "notes": "One routine exam per year. Glasses and contacts not covered under medical plan."
+    },
+    "dental": false,
+    "hearing_aids": false,
+    "weight_loss_surgery": {
+      "covered": true,
+      "notes": "Prior authorization required. Must meet BMI and documented medical necessity criteria."
+    },
+    "cosmetic_surgery": false,
+    "gym_membership": false,
+    "nutrition_counseling": true,
+    "durable_medical_equipment": {
+      "covered": true,
+      "notes": "Covered at 80% after deductible for medically necessary DME (e.g., CPAP, wheelchair). Prior auth may be required."
+    },
+    "home_health_care": {
+      "covered": true,
+      "notes": "Up to 60 visits per year with prior authorization."
+    },
+    "skilled_nursing_facility": {
+      "covered": true,
+      "notes": "Up to 60 days per year after a qualifying hospital stay. Prior authorization required."
+    },
+    "hospice": true,
+    "ambulance": {
+      "covered": true,
+      "notes": "Covered at 80% after deductible for medically necessary transport."
+    }
+  },
+  "referral_required": false,
+  "prior_authorization": {
+    "required_for": [
+      "fertility_treatment",
+      "weight_loss_surgery",
+      "specialty_drugs",
+      "MRI",
+      "CT_scan",
+      "home_health_care",
+      "skilled_nursing_facility",
+      "inpatient_hospital_stays",
+      "some_outpatient_surgeries",
+      "durable_medical_equipment_over_500"
+    ],
+    "not_required_for": [
+      "primary_care",
+      "specialist_visits",
+      "urgent_care",
+      "emergency_room",
+      "mental_health_outpatient",
+      "physical_therapy_up_to_30_visits",
+      "lab_work",
+      "xrays",
+      "chiropractic_up_to_20_visits",
+      "telehealth"
+    ]
+  },
+  "network": {
+    "type": "PPO",
+    "referral_required": false,
+    "out_of_network_covered": true,
+    "out_of_network_deductible": {
+      "individual": 3000,
+      "family": 6000
+    },
+    "out_of_network_coinsurance": "60% after out-of-network deductible",
+    "notes": "You can see any provider without a referral. Out-of-network providers are covered at a lower rate. Always verify a provider is in-network before your visit to minimize costs."
+  },
+  "hospital": {
+    "inpatient_copay": 500,
+    "inpatient_notes": "Per admission copay, then 80% coinsurance after deductible. Prior authorization required for non-emergency admissions.",
+    "outpatient_surgery_copay": 150,
+    "outpatient_surgery_notes": "Per procedure. Some procedures may require prior authorization."
+  },
+  "member_services": {
+    "phone": "1-800-555-0100",
+    "website": "myplan.example.com",
+    "hours": "Mon–Fri 8am–8pm ET"
+  }
+}
